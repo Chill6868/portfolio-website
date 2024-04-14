@@ -1,0 +1,236 @@
+.wrapper {
+  width: calc(100% - 3.2rem);
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  .wrapper {
+    width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .wrapper {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .wrapper {
+    width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .wrapper {
+    width: 1320px;
+  }
+}
+.btn {
+  position: relative;
+  padding: 0.5em 1em;
+  background: transparent;
+  border-radius: 6px;
+}
+.btn__solid, .btn__solid-gradient, .btn__border, .btn__border-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4093f7;
+  border-radius: 6px;
+  transition: filter 0.6s;
+}
+.btn__solid::before, .btn__solid-gradient::before, .btn__border::before, .btn__border-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background: #4093f7 border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+          mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+.btn__solid:hover, .btn__solid-gradient:hover, .btn__border:hover, .btn__border-gradient:hover {
+  filter: brightness(0.7);
+}
+.btn__border {
+  background: transparent;
+}
+.btn__solid-gradient {
+  background: transparent;
+}
+.btn__solid-gradient::before {
+  background: linear-gradient(45deg, #1e428a, #4093f7) border-box;
+  -webkit-mask-composite: source-over;
+          mask-composite: add;
+}
+.btn__border-gradient {
+  background: transparent;
+}
+.btn__border-gradient::before {
+  background: linear-gradient(45deg, #1e428a, #4093f7) border-box;
+}
+.btn__text {
+  position: relative;
+  color: #fff;
+  pointer-events: none;
+}
+
+.text__sm {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.text__md {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.text__lg {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+.text__xl {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.2rem;
+}
+.text__gradient-1 {
+  background: linear-gradient(to right, #447799 30%, #b11e1e 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 576px) {
+  .text__sm {
+    font-size: 1.5rem;
+  }
+  .text__md {
+    font-size: 1.8rem;
+  }
+  .text__lg {
+    font-size: 2.5rem;
+  }
+  .text__xl {
+    font-size: 4.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .text__sm {
+    font-size: 1.6rem;
+  }
+  .text__md {
+    font-size: 2rem;
+  }
+  .text__lg {
+    font-size: 2.75rem;
+  }
+  .text__xl {
+    font-size: 5.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .text__lg {
+    font-size: 3rem;
+  }
+  .text__xl {
+    font-size: 7rem;
+  }
+}
+@media (min-width: 1200px) {
+  .text__xl {
+    font-size: 7.5rem;
+  }
+}
+.text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .text-box {
+    width: 75%;
+  }
+}
+.icon-box {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5em;
+}
+.icon-box__text {
+  gap: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+a {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  border: none;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-position: center;
+  background-size: cover;
+  background-color: #141414;
+}
+
+.example {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.example__text {
+  color: gray;
+}/*# sourceMappingURL=main.css.map */
